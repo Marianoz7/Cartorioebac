@@ -140,7 +140,7 @@ int main()
    printf("Escolha a opção desejada no menu:\n\n");
    printf("\t1 - Registrar Nomes\n");
    printf("\t2 - Consultar Nomes\n");
-   printf("\t3 - Deletar  os nomes\n ");
+   printf("\t3 - Deletar Nomes\n ");
    printf("\t4 - Sair do sistema\n\n"); 
    printf("Opção:"); // Fim do Menu
   
