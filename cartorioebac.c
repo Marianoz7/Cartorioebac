@@ -126,53 +126,67 @@ int main()
 	
   int opcao=0;  // Definindo as variáveis
   int rep=1;
+  char senhadigitada[10]="a";
+  int comparacao;
   
-  for(rep=1;rep==1;)
- {
- 
-   system("cls");
+  printf("###Cartorio da Ebac###\n\n");
+  printf("Login de administrador!\n\nDigite a sua senha:");
+  scanf("%s",senhadigitada);
+  comparacao=strcmp(senhadigitada,"admin");
   
-   setlocale(LC_ALL,"Portuguese"); // Definindo a linguagem
-  
-  
-   printf("###Cartorio da Ebac###\n\n ");  // Inicio do Menu
-  
-   printf("Escolha a opção desejada no menu:\n\n");
-   printf("\t1 - Registrar Nomes\n");
-   printf("\t2 - Consultar Nomes\n");
-   printf("\t3 - Deletar Nomes\n ");
-   printf("\t4 - Sair do sistema\n\n"); 
-   printf("Opção:"); // Fim do Menu
-  
-   scanf("%d",&opcao); // Armazenando a escolha do usuário
-  
-   system("cls"); //Responsável por limpar a tela
-   
-   switch(opcao) // Inicio da seleçao do menu
+  if(comparacao==0)
+  {
+    system("cls");
+    for(rep=1;rep==1;)
    {
-   	case 1:
-   	Registro();
-  	break;
+ 
+    system("cls");
+  
+    setlocale(LC_ALL,"Portuguese"); // Definindo a linguagem
+  
+  
+    printf("###Cartorio da Ebac###\n\n ");  // Inicio do Menu
+  
+    printf("Escolha a opção desejada no menu:\n\n");
+    printf("\t1 - Registrar Nomes\n");
+    printf("\t2 - Consultar Nomes\n");
+    printf("\t3 - Deletar Nomes\n ");
+    printf("\t4 - Sair do sistema\n\n"); 
+    printf("Opção:"); // Fim do Menu
+   
+    scanf("%d",&opcao); // Armazenando a escolha do usuário
+  
+    system("cls"); //Responsável por limpar a tela
+   
+    switch(opcao) // Inicio da seleçao do menu
+    {
+    	case 1:
+    	Registro();
+    	break;
   	
-  	case 2:
-  	Consulta();	
-    break;
-  	
-  	case 3:
-  	Deletar();
-   	break;
+    	case 2:
+  	    Consulta();	
+        break;
+  	 
+  	    case 3:
+     	Deletar();
+     	break;
    	
-   	case 4:
-   	printf("Obrigado por utilizar nosso sistema!\n");
-   	return 0;
-   	break;
+     	case 4:
+    	printf("Obrigado por utilizar nosso sistema!\n");
+    	return 0;
+    	break;
    	
-   	default:
-    printf("Essa opçao não está Disponivel!\n");
-    system("pause");
-   	break;
+    	default:
+        printf("Essa opçao não está Disponivel!\n");
+        system("pause");
+    	break;
    	
-   }
+    }
 
+  }
  }
+  else
+   printf("senha  incorreta!");
+ 
 }
